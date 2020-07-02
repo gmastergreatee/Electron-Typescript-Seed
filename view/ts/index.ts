@@ -11,12 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
     msgBtn.addEventListener('click', () => {
         // removing "remote.getCurrentWindow()" arg from below method
         // call will detach the msgBox from the browserWindow
-        remote.dialog.showMessageBox(remote.getCurrentWindow(), {
-            message: 'U pressed a button',
-            type: 'info',
-            buttons: ['ok', 'cancel'],
-            title: 'Button Press',
-        });
+        remote.dialog
+            .showMessageBox(remote.getCurrentWindow(), {
+                message: 'U pressed a button',
+                type: 'info',
+                buttons: ['ok', 'cancel'],
+                title: 'Button Press',
+            })
+            .then((e) => {
+                switch (e.response) {
+                    case 0:
+                        console.log('U pressed OK');
+                        break;
+                    case 1:
+                        console.log('U cancelled the box');
+                }
+            });
     });
     //
 });
