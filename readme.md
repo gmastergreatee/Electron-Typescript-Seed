@@ -5,7 +5,9 @@
 - Clone the repo
 - Run `npm install` in repo directory
 - Install `Live Sass Compiler` in vscode
+- Run `Watch SASS` extension
 - Install `Live Server` in vscode
+- Run `Live Server` extension
 - Open repo directory in vscode
 - Run in terminal `npm run watch`
 - Run in another terminal `npm run start`
