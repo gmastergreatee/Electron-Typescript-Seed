@@ -1,0 +1,21 @@
+{
+  "name": "electron-typescript-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:app": "tsc -p tsconfig.json",
+    "build:view": "tsc -p view/tsconfig.json",
+    "build": "concurrently \"npm:build:*\"",
+    "watch": "tsc -w -p view/tsconfig.json",
+    "start": "npm run build:app && electron ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "[M]en-[I]n-[T]ie",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "electron": "^9.0.5",
+    "typescript": "^3.9.6"
+  }
+}
